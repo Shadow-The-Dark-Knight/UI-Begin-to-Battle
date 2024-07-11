@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+
+body{
+  background-color: rgb(21, 24, 33);
+  font-family: Ga Maamli, Arial;
+}
+
+
+:root{
+ --clr--1: #FF0000;
+ --clr--2: #4753FF;
+ --clr--3: #FFBB0F;
+ --clr--4: #249F3F;
+ --clr--5: #909090;
+}
+
+
+section {
+}
+
+div {
+ display: flex;
+ align-content: center;
+ justify-content: center;
+ font-size: 200px;
+
+}
+
+.three,
+.two,
+.one,
+.go {
+  color: transparent;
+  font-size: 16vw;
+  width: min-content; 
+  margin: auto;
+  text-shadow: 0px 0px 0px #1d1d1d8c;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: purple;
+
+  
+  background: linear-gradient(
+    280deg, var(--clr--1) 19%,
+    transparent 0%, transparent 0%,
+    var(--clr--2) 0%, var(--clr--2) 60%,
+    transparent 0%, transparent 0%,
+    var(--clr--3) 0%, var(--clr--3) 0%,
+    transparent 0%, transparent 0%,
+    var(--clr--4) 10%, var(--clr--4) 79%,
+    transparent 50%, transparent 0%,
+    var(--clr--5) 70%
+  );
+  -webkit-background-clip: text;
+  */
+}
+ /* remeber transparentecy */
+
+.three {
+  animation-name: expand;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+@keyframes expand {
+ 0% {
+  font-size: 200px;
+ }
+ 40% {
+  font-size: 600px;
+  letter-spacing: 70px;
+ }
+
+ 95% {
+  font-size: 1000px;
+
+ }
+
+ 100% {
+  font-size: 0px;
+ }
+}
+
+.two {
+  animation-name: expand-two;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+@keyframes expand-two {
+  0% {
+    font-size: 200px;
+   }
+   40% {
+    font-size: 600px;
+    letter-spacing: 70px;
+   }
+  
+   95% {
+    font-size: 1000px;
+  
+   }
+  
+   100% {
+    font-size: 0px;
+   }
+  }
+
+
+  .one {
+    animation-name: expand-one;
+    animation-duration: 0.45s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  @keyframes expand-one {
+    0% {
+      font-size: 200px;
+     }
+     40% {
+      font-size: 600px;
+      letter-spacing: 70px;
+     }
+    
+     95% {
+      font-size: 1000px;
+    
+     }
+    
+     100% {
+      font-size: 0px;
+     }
+    }
+  
+
+  .go {
+    animation-name: expand-go;
+    animation-duration: 0.45s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+    animation-timing-function: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  
+  @keyframes expand-go {
+    0% {
+      font-size: 200px;
+     }
+     40% {
+      font-size: 600px;
+      letter-spacing: 70px;
+     }
+    
+     95% {
+      font-size: 1000px;
+    
+     }
+    
+     100% {
+      font-size: 0px;
+     }
+    }
