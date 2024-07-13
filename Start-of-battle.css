@@ -6,16 +6,9 @@ body{
 }
 
 
-:root{
- --clr--1: #FF0000;
- --clr--2: #4753FF;
- --clr--3: #FFBB0F;
- --clr--4: #249F3F;
- --clr--5: #909090;
-}
-
-
 section {
+  position: relative;
+  text-align: center;
 }
 
 div {
@@ -28,33 +21,36 @@ div {
 
 .three,
 .two,
-.one,
-.go {
+.one {
   color: transparent;
   font-size: 16vw;
   width: min-content; 
   margin: auto;
-  text-shadow: 0px 0px 0px #1d1d1d8c;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: white;
-  -webkit-text-fill-color: purple;
-
-  
-  background: linear-gradient(
-    280deg, var(--clr--1) 19%,
-    transparent 0%, transparent 0%,
-    var(--clr--2) 0%, var(--clr--2) 60%,
-    transparent 0%, transparent 0%,
-    var(--clr--3) 0%, var(--clr--3) 0%,
-    transparent 0%, transparent 0%,
-    var(--clr--4) 10%, var(--clr--4) 79%,
-    transparent 50%, transparent 0%,
-    var(--clr--5) 70%
-  );
+  background: linear-gradient(rgb(255, 0, 0),rgb(187, 187, 45));
   -webkit-background-clip: text;
-  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -210%);
 }
- /* remeber transparentecy */
+
+ .go {
+  color: transparent;
+  font-size: 16vw;
+  width: min-content; 
+  margin: auto;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+  background: linear-gradient(rgb(255, 0, 0),rgb(187, 187, 45));
+  -webkit-background-clip: text;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -160%);
+  
+ }
 
 .three {
   animation-name: expand;
@@ -68,15 +64,15 @@ div {
 
 @keyframes expand {
  0% {
-  font-size: 200px;
+  font-size: 125px;
  }
  40% {
-  font-size: 600px;
-  letter-spacing: 70px;
+  font-size: 150px;
+
  }
 
  95% {
-  font-size: 1000px;
+  font-size: 200px;
 
  }
 
@@ -86,70 +82,90 @@ div {
 }
 
 .two {
+  visibility: hidden;
   animation-name: expand-two;
-  animation-duration: 0.45s;
-  animation-timing-function: ease-out;
-  animation-delay: 0.5s;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.25s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: both;
+  opacity: 0;
 }
 
 @keyframes expand-two {
-  0% {
-    font-size: 200px;
-   }
-   40% {
-    font-size: 600px;
-    letter-spacing: 70px;
-   }
+    0% {
+      visibility: hidden;
+      font-size: 125px;
+      opacity: 0.2;
+    }
+    40% {
+      visibility:hidden;
+      font-size: 150px;
+      opacity: 0.5;
+    }
+    
+    95% {
+      visibility: visible;
+      font-size: 200px;
+      opacity: 1;
+    
+    }
+    
+    100% {
+      visibility: visible;
+      font-size: 0px;
+      opacity: 0;
+    }
+    }
+
   
-   95% {
-    font-size: 1000px;
-  
-   }
-  
-   100% {
-    font-size: 0px;
-   }
-  }
 
 
   .one {
+    visibility: hidden;
     animation-name: expand-one;
-    animation-duration: 0.45s;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.75s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
   }
 
-  @keyframes expand-one {
+  @keyframes expand-one  {
     0% {
-      font-size: 200px;
-     }
-     40% {
-      font-size: 600px;
-      letter-spacing: 70px;
-     }
-    
-     95% {
-      font-size: 1000px;
-    
-     }
-    
-     100% {
-      font-size: 0px;
-     }
+      visibility: hidden;
+      font-size: 125px;
+      opacity: 0.2;
     }
-  
+    40% {
+      visibility:hidden;
+      font-size: 150px;
+      opacity: 0.5;
+    }
+    
+    95% {
+      visibility: visible;
+      font-size: 200px;
+      opacity: 1;
+    
+    }
+    
+    100% {
+      visibility: visible;
+      font-size: 0px;
+      opacity: 0;
+    }
+    }
+
 
   .go {
+    visibility: hidden;
     animation-name: expand-go;
-    animation-duration: 0.45s;
-    animation-delay: 1.5s;
-    animation-timing-function: ease-out;
+    animation-duration: 0.6s;
+    animation-delay: 1.25s;
+    animation-timing-function: ease-in-out;
     animation-timing-function: 1.5s;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -157,21 +173,31 @@ div {
   }
 
   
-  @keyframes expand-go {
+  @keyframes expand-go  {
     0% {
-      font-size: 200px;
-     }
-     40% {
-      font-size: 600px;
-      letter-spacing: 70px;
-     }
-    
-     95% {
-      font-size: 1000px;
-    
-     }
-    
-     100% {
-      font-size: 0px;
-     }
+      visibility: hidden;
+      font-size: 125px;
+      opacity: 0.2;
     }
+    40% {
+      visibility:hidden;
+      font-size: 150px;
+      letter-spacing: 70px;
+      opacity: 0.5;
+    }
+    
+    95% {
+      visibility: visible;
+      font-size: 300px;
+      opacity: 1.5;
+    
+    }
+    
+    100% {
+      visibility: visible;
+      font-size: 0px;
+      opacity: 0;
+    }
+  }
+
+  
