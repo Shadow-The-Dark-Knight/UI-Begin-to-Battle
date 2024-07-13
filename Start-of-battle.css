@@ -54,7 +54,7 @@ div {
 
 .three {
   animation-name: expand;
-  animation-duration: 0.45s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 0;
   animation-iteration-count: 1;
@@ -84,9 +84,9 @@ div {
 .two {
   visibility: hidden;
   animation-name: expand-two;
-  animation-duration: 0.6s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  animation-delay: 0.25s;
+  animation-delay: 0.75s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: both;
@@ -125,9 +125,9 @@ div {
   .one {
     visibility: hidden;
     animation-name: expand-one;
-    animation-duration: 0.6s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.75s;
+    animation-delay: 1.25s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
@@ -163,8 +163,8 @@ div {
   .go {
     visibility: hidden;
     animation-name: expand-go;
-    animation-duration: 0.6s;
-    animation-delay: 1.25s;
+    animation-duration: 1s;
+    animation-delay: 1.75s;
     animation-timing-function: ease-in-out;
     animation-timing-function: 1.5s;
     animation-iteration-count: 1;
@@ -200,4 +200,5 @@ div {
     }
   }
 
+  
   
